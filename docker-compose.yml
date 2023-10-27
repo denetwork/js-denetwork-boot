@@ -1,0 +1,23 @@
+version: '3'
+services:
+    denetworkBootSrv:                       # Service Name
+        container_name: denetwork-boot-srv
+        hostname: denetwork-boot-srv
+        build:
+            context: .
+        image: denetwork-boot-srv:latest
+        ports:
+            # 指定端口映射，类似 docker run 的 -p 选项，注意使用字符串形式
+            # [local port]:[container port]
+            - "8011:8011"
+        volumes:
+            #- ./deploy/etc/localtime:/etc/localtime:ro
+            #- ./deploy/etc/timezone:/etc/timezone:ro
+            #- ./deploy/etc/hosts:/etc/hosts:ro
+            - ./deploy/etc/denetwork/.peerId:/etc/denetwork/.peerId:ro
+            - ./deploy/etc/denetwork/.swarmKey:/etc/denetwork/.swarmKey:ro
+#        environment:
+#            - LISTEN_PORT=8011
+#            - FILE_PEER_ID=/etc/denetwork/.peerId
+#            - FILE_SWARM_KEY=/etc/denetwork/.swarmKey
+#            - ANNOUNCE_MULTIADDRS=

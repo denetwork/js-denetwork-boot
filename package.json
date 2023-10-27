@@ -1,0 +1,70 @@
+{
+	"name": "denetwork-boot",
+	"version": "1.0.0",
+	"description": "An out-of-the-box bootstrapper for p2p networks",
+	"leadMaintainer": "DeNetwork, Team.",
+	"main": "src/main.js",
+	"scripts": {
+		"help": "node src/help.js",
+		"dev": "node src/main.js",
+		"start": "node src/main.js"
+	},
+	"type": "module",
+	"files": [
+		"src",
+		"dist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/denetwork/js-denetwork-boot.git"
+	},
+	"keywords": [
+		"libp2p",
+		"relay",
+		"auto relay",
+		"hop",
+		"bootstrap"
+	],
+	"author": "DeNetwork, Team.",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/denetwork/js-denetwork-boot/issues"
+	},
+	"homepage": "https://github.com/denetwork/js-denetwork-boot#readme",
+	"dependencies": {
+		"@chainsafe/libp2p-gossipsub": "^10.1.0",
+		"@chainsafe/libp2p-noise": "^13.0.0",
+		"@chainsafe/libp2p-yamux": "^5.0.0",
+		"@libp2p/bootstrap": "^9.0.2",
+		"@libp2p/floodsub": "^8.0.3",
+		"@libp2p/interface-peer-id": "^2.0.2",
+		"@libp2p/mplex": "^8.0.4",
+		"@libp2p/peer-id": "^2.0.4",
+		"@libp2p/peer-id-factory": "^3.0.2",
+		"@libp2p/pubsub": "^8.0.3",
+		"@libp2p/pubsub-peer-discovery": "^8.0.4",
+		"@libp2p/tcp": "^8.0.2",
+		"@libp2p/websockets": "^7.0.2",
+		"denetwork-lib": "^1.0.0",
+		"denetwork-utils": "^1.0.0",
+		"chalk": "^5.3.0",
+		"dotenv": "^16.3.1",
+		"libp2p": "^0.46.3",
+		"menoetius": "^0.0.3",
+		"minimist": "^1.2.8",
+		"multiformats": "^12.0.1",
+		"uint8arrays": "^4.0.6"
+	},
+	"devDependencies": {
+		"@types/node": "^20.3.3",
+		"@types/readable-stream": "^2.3.15",
+		"aegir": "^35.0.1",
+		"ts-jest": "^29.1.0",
+		"ts-loader": "^9.4.2",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.1.6"
+	},
+	"contributors": [
+		"Qixing Liu <liuqixing@dekuan.org>"
+	]
+}
